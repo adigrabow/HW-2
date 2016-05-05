@@ -159,7 +159,9 @@ int** spGetRGBHist(char* str, int nBins){ // red, green, blue
  * @return -1 if nBins <= 0 or histA/histB is null, otherwise the average L@-squared distance.
  */
 double spRGBHistL2Distance(int** histA, int** histB, int nBins){
-	double sum0,sum1,sum2; // sum of each row
+	double sum0 = 0;
+	double sum1 = 0;
+	double sum2 = 0; // sum of each row
 	double res;
 
 	if ((nBins<=0) ||  (histA == NULL) || (histB == NULL))
@@ -345,7 +347,7 @@ int compare (const void * a, const void * b){
 	Feature * f1 = (Feature *) a;
 	Feature * f2 = (Feature *) b;
 
-	if(f1->distance == f2->distance){
+	if(f1->distance == f2->distance){ // if distances are equal - choose first the smaller index
 		return (f1->index - f2->index);
 	}
 	else
