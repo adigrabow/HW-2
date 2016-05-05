@@ -10,3 +10,4 @@ HW2.cpp
 
 .settings/language.settings.xml
 *.prefs
+.settings/org.eclipse.cdt.managedbuilder.core.prefs
