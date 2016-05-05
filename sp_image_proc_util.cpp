@@ -91,13 +91,13 @@ int** spGetRGBHist(char* str, int nBins){ // red, green, blue
 			return NULL; // allocation error
 	}
 
-	for (int i; i<nBins ; i++){ // RED
+	for (int i=0; i<nBins ; i++){ // RED
 		c[0][i] = (int) b_hist.at<float>(i);
 	}
-	for (int i; i<nBins ; i++){ // GREEN
+	for (int i=0; i<nBins ; i++){ // GREEN
 			c[1][i] = (int) g_hist.at<float>(i);
 	}
-	for (int i; i<nBins ; i++){ // BLUE
+	for (int i=0; i<nBins ; i++){ // BLUE
 			c[2][i] = (int) b_hist.at<float>(i);
 	}
 
